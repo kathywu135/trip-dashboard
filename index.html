@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026 岡山・神戶行 Dashboard</title>
+    <meta
+      name="description"
+      content="手機優先的 2026 岡山・神戶旅遊 Dashboard，整合航班、待辦、JR Pass、網路方案與天氣查詢。"
+    >
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <main class="app-shell">
+      <section id="hero" class="hero"></section>
+      <section id="transport" class="section-stack"></section>
+      <section id="lodging" class="section-stack"></section>
+      <section id="flights" class="dashboard-section"></section>
+      <section id="backup-days" class="section-stack"></section>
+      <section id="itinerary" class="section-stack"></section>
+      <section id="weather" class="section-stack"></section>
+      <section id="checklist" class="section-stack"></section>
+      <section id="connectivity" class="section-stack"></section>
+    </main>
+    <div id="attraction-modal-root"></div>
+    <script src="./data/trip-data.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
