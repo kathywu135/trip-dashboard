@@ -10,7 +10,7 @@ window.tripData = {
       city: "岡山",
       nights: "6/27 - 7/2",
       name: "Via Inn 岡山",
-      note: "確認碼：5046714531 / PIN：2866",
+      note: "入住資料請以 Booking / 飯店官方紀錄為準",
       address: "岡山県岡山市北区駅元町1-25",
       postalCode: "7000024",
       phone: "0862515489",
@@ -221,7 +221,7 @@ window.tripData = {
       ],
       stay: {
         name: "Via Inn 岡山",
-        note: "確認碼：5046714531 / PIN：2866",
+        note: "入住資料請以 Booking / 飯店官方紀錄為準",
         mapsQuery: "Via Inn Okayama"
       },
       timeline: [
