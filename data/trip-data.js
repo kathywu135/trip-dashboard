@@ -1027,7 +1027,7 @@ window.tripData = {
             {
               type: "午餐",
               name: "Kobe Beef WASSIA",
-              note: "神戶牛主餐",
+              note: "建議點：樓梯盛（2人份）、冷麵 ×1、拌飯 ×1（視情況加點）、烤蔬菜 ×1、上肩肉 ×1、特上肋條 ×1",
               mapsQuery: "Kobe Beef WASSIA"
             },
             {
@@ -1431,7 +1431,6 @@ window.tripData = {
   ],
   flights: {
     airline: "星宇航空",
-    bookingCode: "DA7RIE",
     tasks: [
       {
         label: "出發前完成線上 Check-in、選位、訂餐",
@@ -1580,11 +1579,41 @@ window.tripData = {
     ]
   },
   weatherLinks: [
-    { city: "神戶", url: "https://tenki.jp/forecast/6/31/6310/28100/10days.html" },
-    { city: "岡山", url: "https://tenki.jp/forecast/7/36/6610/33100/10days.html" },
-    { city: "尾道", url: "https://tenki.jp/forecast/7/37/6710/34205/10days.html" },
-    { city: "廣島", url: "https://tenki.jp/forecast/7/37/6710/34100/10days.html" },
-    { city: "門司港（北九州）", url: "https://tenki.jp/forecast/9/43/8220/40100/10days.html" },
-    { city: "高松", url: "https://tenki.jp/forecast/8/40/7200/37201/10days.html" }
+    {
+      city: "神戶",
+      url: "https://tenki.jp/forecast/6/31/6310/28100/10days.html",
+      latitude: 34.6901,
+      longitude: 135.1955
+    },
+    {
+      city: "岡山",
+      url: "https://tenki.jp/forecast/7/36/6610/33100/10days.html",
+      latitude: 34.6551,
+      longitude: 133.9195
+    },
+    {
+      city: "尾道",
+      url: "https://tenki.jp/forecast/7/37/6710/34205/10days.html",
+      latitude: 34.4089,
+      longitude: 133.2049
+    },
+    {
+      city: "廣島",
+      url: "https://tenki.jp/forecast/7/37/6710/34100/10days.html",
+      latitude: 34.3853,
+      longitude: 132.4553
+    },
+    {
+      city: "門司港（北九州）",
+      url: "https://tenki.jp/forecast/9/43/8220/40100/10days.html",
+      latitude: 33.9459,
+      longitude: 130.9619
+    },
+    {
+      city: "高松",
+      url: "https://tenki.jp/forecast/8/40/7200/37201/10days.html",
+      latitude: 34.3428,
+      longitude: 134.0466
+    }
   ]
 };

@@ -6,6 +6,21 @@ function googleMapsUrl(query) {
   return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(query)}`;
 }
 
+function renderWeatherCards() {
+  return tripData.weatherLinks
+    .map(
+      (item) => `
+        <a class="weather-card weather-card-fallback" href="${item.url}" target="_blank" rel="noreferrer">
+          <div class="weather-card-copy">
+            <strong>${item.city}</strong>
+          </div>
+          <span class="weather-card-arrow">↗</span>
+        </a>
+      `
+    )
+    .join("");
+}
+
 function getAttraction(day, attractionId) {
   return day?.attractions?.find((item) => item.id === attractionId);
 }
@@ -429,7 +444,6 @@ function renderFlights() {
       <h2>航班資訊</h2>
       <span class="pill">${tripData.flights.airline}</span>
     </div>
-    <div class="booking-code">訂位代號：<strong>${tripData.flights.bookingCode}</strong></div>
     <div class="flight-task-list">
       ${tripData.flights.tasks
         .map(
@@ -547,19 +561,10 @@ function renderWeather() {
     <section class="stack-card">
       <div class="section-title-row">
         <h2>天氣查詢</h2>
-        <span class="pill">出發前一週確認</span>
+        <span class="pill">連到 tenki.jp</span>
       </div>
-      <div class="weather-links">
-        ${tripData.weatherLinks
-          .map(
-            (item) => `
-              <a class="weather-link" href="${item.url}" target="_blank" rel="noreferrer">
-                <span>${item.city}</span>
-                <span>查看預報</span>
-              </a>
-            `
-          )
-          .join("")}
+      <div class="weather-card-grid" id="weather-card-grid">
+        ${renderWeatherCards()}
       </div>
     </section>
   `;
@@ -567,13 +572,11 @@ function renderWeather() {
 
 if (tripData) {
   renderHero();
-  renderTransport();
-  renderLodging();
-  renderFlights();
-  renderBackupDays();
-  renderItinerary();
   renderWeather();
-  renderChecklist();
-  renderConnectivity();
+  renderItinerary();
+  renderBackupDays();
+  renderFlights();
+  renderLodging();
+  renderTransport();
   attachAttractionEvents();
 }
